@@ -1,0 +1,214 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+
+Navbar
+
+
+*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(1, 25, 102);
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: chocolate;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.675rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3.5px;
+  width: 100%;
+  background-color: white;
+}
+
+/*
+
+
+Landing
+
+
+*/
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.landing {
+  height: 50vh;
+}
+.bg-image {
+  position: absolute;
+  background-image: url(/images/delivery.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.container > .content {
+  margin: 5rem 0;
+}
+
+.content > .heading {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 2rem 0;
+  color: white;
+}
+
+.content > p {
+  color: white;
+}
+
+.btn {
+  background: #ff9505;
+  border-radius: 10px;
+  padding: 0.725rem 1.25rem;
+  border: none;
+  transition: all 0.2s ease-in 0s;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.content .buttons {
+  margin: 2rem 0;
+}
+/*
+
+
+Media Queries
+
+
+*/
+
+/*
+
+Phones
+
+*/
+
+@media screen and (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/*
+
+Tablets
+
+*/
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+  }
+  .container > .content {
+    grid-column: 1/-1;
+    margin: 5rem 0;
+  }
+
+  .content > .heading {
+    font-size: 4rem;
+  }
+}
+
+/*
+
+Laptops and up
+
+*/
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+  }
+
+  .container > .content {
+    grid-column: 1/7;
+    margin: 4rem 0;
+  }
+
+  .content > .heading {
+    font-size: 5rem;
+  }
+
+  .content p {
+    width: 70%;
+  }
+}
