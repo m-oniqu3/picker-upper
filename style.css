@@ -84,7 +84,7 @@ Landing
 }
 .bg-image {
   position: absolute;
-  background-image: url("../images/delivery.png");
+  background-image: url("https://github.com/m-oniqu3/picker-upper/blob/main/images/delivery.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
